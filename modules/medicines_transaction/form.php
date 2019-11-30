@@ -11,9 +11,9 @@
           document.getElementById('jumlah_masuk').focus();
         });
       }
-    
-    
+
       function checkearValido(){
+          //document.getElementById('formObatMasuk').submit();
           var num = document.getElementById('total_stok').value;
           if(num>=0){
               document.getElementById('formObatMasuk').submit();
@@ -22,6 +22,7 @@
               alert("No se puede reducir el stock a menos de 0");
           }
       }
+    
       function cek_jumlah_masuk(input) {
         jml = document.formObatMasuk.jumlah_masuk.value;
         var jumlah = eval(jml);
