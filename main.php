@@ -10,10 +10,11 @@ session_start();
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Inventario de Medicamentos">
-    <meta name="author" content="Inventario de Medicamentos - Sistemas Web" />
+    <meta name="author" content="Inventario de Medicamentos - Farmacia La Salud" />
     
     <!-- favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" />
+      
+    <!--<link rel="shortcut icon" href="assets/img/favicon.png" />-->
 
     <!-- Bootstrap 3.3.2 -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
@@ -80,12 +81,13 @@ session_start();
   </head>
   <body class="skin-blue fixed">
     <div class="wrapper">
+    <div class="wrapper">
       
       <header class="main-header">
         <!-- Logo -->
         <a href="?module=beranda" class="logo">
-          <img style="margin-top:-15px;margin-right:5px" src="assets/img/logo-blue.png" alt="Logo"> 
-          <span style="font-size:20px">MEDISYS</span>
+          <img style="margin-top:-15px;margin-right:5px" src="assets/img/LogoFarmaciaLaSaludPequeño.jpeg" alt="Logo" width="200" height="50">
+          <!--<span style="font-size:20px">Farmacia "La Salud"</span>-->
         </a>
 
         <nav class="navbar navbar-static-top" role="navigation">
@@ -140,7 +142,7 @@ session_start();
       </div><!-- /.content-wrapper -->
 
       <footer class="main-footer">
-        <strong>Copyright &copy; <?php echo date('Y');?> - <a href="http://obedalvarado.pw/" target="_blank">Sistemas Web</a>.</strong>
+        <!--<strong>Copyright &copy; <?php echo date('Y');?> - <a href="http://obedalvarado.pw/" target="_blank">Sistemas Web</a>.</strong>-->
       </footer>
     </div><!-- ./wrapper -->
 

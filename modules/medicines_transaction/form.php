@@ -169,7 +169,7 @@ if ($_GET['form']=='add') { ?>
             <div class="box-footer">
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <input type="button" class="btn btn-primary btn-submit" name="Guardar" value="Guardar" onclick="checkearValido()">
+                  <input type="button" class="btn btn-primary btn-submit" id="Guardar" name="Guardar" value="Guardar" onclick="checkearValido()">
                   <a href="?module=medicines_transaction" class="btn btn-default btn-reset">Cancelar</a>
                 </div>
               </div>
