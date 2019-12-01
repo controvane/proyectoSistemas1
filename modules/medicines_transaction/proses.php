@@ -14,7 +14,10 @@ if (empty($_SESSION['username']) && empty($_SESSION['password'])){
 
 else {
     if ($_GET['act']=='insert') {
-        if (isset($_POST['Guardar'])) {
+        
+        //echo "llego hasta aqui, no existe el boton guardar";
+        
+        //if (isset($_POST['Guardar'])) {
             
             $codigo_transaccion = mysqli_real_escape_string($mysqli, trim($_POST['codigo_transaccion']));
             
@@ -53,7 +56,7 @@ else {
                     header("location: ../../main.php?module=medicines_transaction&alert=1");
                 }
             }   
-        }   
+        //}   
     }
 }       
 ?>
