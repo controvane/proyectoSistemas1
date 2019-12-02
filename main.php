@@ -85,7 +85,7 @@ session_start();
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="?module=beranda" class="logo">
+        <a href="?module=inicioVacio" class="logo">
           <img style="margin-top:-15px;margin-right:5px" src="assets/img/LogoFarmaciaLaSaludPequeño.jpeg" alt="Logo" width="200" height="50">
           <!--<span style="font-size:20px">Farmacia "La Salud"</span>-->
         </a>

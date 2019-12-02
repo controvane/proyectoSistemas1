@@ -87,7 +87,7 @@ elseif ($_GET['form']=='edit') {
       <i class="fa fa-edit icon-title"></i> Modificar datos de Usuario
     </h1>
     <ol class="breadcrumb">
-      <li><a href="?module=beranda"><i class="fa fa-home"></i> Inicio</a></li>
+      <li><a href="?module=inicioVacio"><i class="fa fa-home"></i> Inicio</a></li>
       <li><a href="?module=user"> Usuario </a></li>
       <li class="active"> Modificar </li>
     </ol>

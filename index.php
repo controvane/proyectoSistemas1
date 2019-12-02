@@ -8,9 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Solicitud de inventario de medicamentos de la farmacia La Salud">
 
-    <!-- favicon -->
-    <!--<link rel="shortcut icon" href="assets/img/favicon.png" />-->
-
     <!-- Bootstrap 3.3.2 -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
