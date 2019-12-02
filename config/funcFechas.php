@@ -1,8 +1,8 @@
 <?php
 	
-	function tgl_eng_to_ind($tgl) {
-		$tanggal	= explode('-',$tgl);
-		$kdbl		= $tanggal[1];
+	function fec_a_mes($fec) {
+		$fecha	= explode('-',$fec);
+		$kdbl		= $fecha[1];
 
 		if ($kdbl == '01')	{
 			$nbln = 'Enero';
@@ -44,7 +44,7 @@
 			$nbln = '';
 		}
 		
-		$tgl_ind = $tanggal[0]."  ".$nbln."  ".$tanggal[2];
-		return $tgl_ind;
+		$fec_mes = $fecha[0]."  ".$nbln."  ".$tanggal[2];
+		return $fec_mes;
 	}
 ?>

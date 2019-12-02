@@ -20,7 +20,7 @@ if ($_GET['form']=='add') { ?>
       <div class="col-md-12">
         <div class="box box-primary">
           <!-- form start -->
-          <form role="form" class="form-horizontal" method="POST" action="modules/user/proses.php?act=insert" enctype="multipart/form-data">
+          <form role="form" class="form-horizontal" method="POST" action="modules/user/process.php?act=insert" enctype="multipart/form-data">
             <div class="box-body">
 
               <div class="form-group">
@@ -99,7 +99,7 @@ elseif ($_GET['form']=='edit') {
       <div class="col-md-12">
         <div class="box box-primary">
           <!-- form start -->
-          <form role="form" class="form-horizontal" method="POST" action="modules/user/proses.php?act=update" enctype="multipart/form-data">
+          <form role="form" class="form-horizontal" method="POST" action="modules/user/process.php?act=update" enctype="multipart/form-data">
             <div class="box-body">
 
               <input type="hidden" name="id_user" value="<?php echo $data['id_user']; ?>">

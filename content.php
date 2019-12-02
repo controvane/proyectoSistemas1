@@ -1,7 +1,7 @@
 <?php
 require_once "config/database.php";
-require_once "config/fungsi_tanggal.php";
-require_once "config/fungsi_rupiah.php";
+require_once "config/FuncFechas.php";
+require_once "config/funcMoneda.php";
 
 
 if (empty($_SESSION['username']) && empty($_SESSION['password'])){

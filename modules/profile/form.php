@@ -25,7 +25,7 @@ if (isset($_POST['id_user'])) {
       <div class="col-md-12">
         <div class="box box-primary">
           <!-- form start -->
-          <form role="form" class="form-horizontal" method="POST" action="modules/profile/proses.php?act=update" enctype="multipart/form-data">
+          <form role="form" class="form-horizontal" method="POST" action="modules/profile/process.php?act=update" enctype="multipart/form-data">
             <div class="box-body">
 
               <input type="hidden" name="id_user" value="<?php echo $data['id_user']; ?>">

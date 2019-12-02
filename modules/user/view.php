@@ -127,13 +127,13 @@
                           <div>";
 
                           if ($data['status']=='activo') { ?>
-                            <a data-toggle="tooltip" data-placement="top" title="Bloqueado" style="margin-right:5px" class="btn btn-warning btn-sm" href="modules/user/proses.php?act=off&id=<?php echo $data['id_user'];?>">
+                            <a data-toggle="tooltip" data-placement="top" title="Bloqueado" style="margin-right:5px" class="btn btn-warning btn-sm" href="modules/user/process.php?act=off&id=<?php echo $data['id_user'];?>">
                                 <i style="color:#fff" class="glyphicon glyphicon-off"></i>
                             </a>
             <?php
                           } 
                           else { ?>
-                            <a data-toggle="tooltip" data-placement="top" title="activo" style="margin-right:5px" class="btn btn-success btn-sm" href="modules/user/proses.php?act=on&id=<?php echo $data['id_user'];?>">
+                            <a data-toggle="tooltip" data-placement="top" title="activo" style="margin-right:5px" class="btn btn-success btn-sm" href="modules/user/process.php?act=on&id=<?php echo $data['id_user'];?>">
                                 <i style="color:#fff" class="glyphicon glyphicon-ok"></i>
                             </a>
             <?php

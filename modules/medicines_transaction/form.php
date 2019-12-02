@@ -1,6 +1,6 @@
 
 <script type="text/javascript">
-      function tampil_obat(input){
+      function appearMed(input){
         var num = input.value;
 
         $.post("modules/medicines_transaction/medicines.php", {
@@ -8,34 +8,34 @@
         }, function(response) {      
           $('#stok').html(response)
 
-          document.getElementById('jumlah_masuk').focus();
+          document.getElementById('inputNumber').focus();
         });
       }
 
       function checkearValido(){
-          //document.getElementById('formObatMasuk').submit();
+          //document.getElementById('formInMed').submit();
           var num = document.getElementById('total_stok').value;
           if(num>=0){
-              document.getElementById('formObatMasuk').submit();
+              document.getElementById('formInMed').submit();
           }
           else{
               alert("No se puede reducir el stock a menos de 0");
           }
       }
     
-      function cek_jumlah_masuk(input) {
-        jml = document.formObatMasuk.jumlah_masuk.value;
+      function checkInputNumber(input) {
+        jml = document.formInMed.inputNumber.value;
         var jumlah = eval(jml);
         if(jumlah < 1){
-          alert('Jumlah Masuk Tidak Boleh Nol !!');
+          alert('Cantidad de entrada no permitida.');
           input.value = input.value.substring(0,input.value.length-1);
         }
       }
 
-      function hitung_total_stok() {
-        bil1 = document.formObatMasuk.stok.value;
-        bil2 = document.formObatMasuk.jumlah_masuk.value;
-        tt = document.formObatMasuk.transaccion.value;
+      function countTotalStock() {
+        bil1 = document.formInMed.stok.value;
+        bil2 = document.formInMed.inputNumber.value;
+        tt = document.formInMed.transaccion.value;
 
         if (bil2 == "") {
           var hasil = "";
@@ -46,9 +46,9 @@
         }
 
         if (tt=="Salida"){
-            document.formObatMasuk.total_stok.value = (salida);
+            document.formInMed.total_stok.value = (salida);
         }	else {
-            document.formObatMasuk.total_stok.value = (hasil);
+            document.formInMed.total_stok.value = (hasil);
         } 
 
       }
@@ -75,7 +75,7 @@ if ($_GET['form']=='add') { ?>
       <div class="col-md-12">
         <div class="box box-primary">
           <!-- form start -->
-          <form role="form" class="form-horizontal" action="modules/medicines_transaction/proses.php?act=insert" method="POST" id = "formObatMasuk" name="formObatMasuk">
+          <form role="form" class="form-horizontal" action="modules/medicines_transaction/process.php?act=insert" method="POST" id = "formInMed" name="formInMed">
             <div class="box-body">
               <?php  
             
@@ -95,8 +95,8 @@ if ($_GET['form']=='add') { ?>
 
              
               $tahun          = date("Y");
-              $buat_id        = str_pad($codigo, 7, "0", STR_PAD_LEFT);
-              $codigo_transaccion = "TM-$tahun-$buat_id";
+              $crear_id        = str_pad($codigo, 7, "0", STR_PAD_LEFT);
+              $codigo_transaccion = "TM-$tahun-$crear_id";
               ?>
 
               <div class="form-group">
@@ -118,7 +118,7 @@ if ($_GET['form']=='add') { ?>
               <div class="form-group">  
                 <label class="col-sm-2 control-label">Medicamento</label>
                 <div class="col-sm-5">
-                  <select class="chosen-select" name="codigo" data-placeholder="-- Seleccionar Medicamento --" onchange="tampil_obat(this)" autocomplete="off" required>
+                  <select class="chosen-select" name="codigo" data-placeholder="-- Seleccionar Medicamento --" onchange="appearMed(this)" autocomplete="off" required>
                     <option value=""></option>
                     <?php
                       $query_obat = mysqli_query($mysqli, "SELECT codigo, nombre FROM Medicamentos ORDER BY nombre ASC")
@@ -143,14 +143,14 @@ if ($_GET['form']=='add') { ?>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Cantidad</label>
                 <div class="col-sm-5">
-                  <input type="text" class="form-control" id="jumlah_masuk" name="num" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" onkeyup="hitung_total_stok(this)&cek_jumlah_masuk(this)" required>
+                  <input type="text" class="form-control" id="inputNumber" name="num" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" onkeyup="countTotalStock(this)&checkInputNumber(this)" required>
                 </div>
               </div>
 			  
 			  <div class="form-group">
                 <label class="col-sm-2 control-label">Transacción</label>
                 <div class="col-sm-5">
-                  <select name="transaccion" id="transaccion" required class='form-control' onchange="hitung_total_stok();">
+                  <select name="transaccion" id="transaccion" required class='form-control' onchange="countTotalStock();">
 					<option value="Salida">Salida</option>
 					<option value="Entrada">Entrada</option>
 				  </select>

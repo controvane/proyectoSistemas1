@@ -1,8 +1,8 @@
 <?php
 session_start();
-// hapus session
+// terminar la sesion
 session_destroy();
 
-// alihkan ke halaman login (index.php) dan berikan alert = 2
+// Salir a index con mensaje de sesion cerrada
 header('Location: index.php?alert=2');
 ?>

@@ -19,7 +19,7 @@ if ($_GET['form']=='add') { ?>
       <div class="col-md-12">
         <div class="box box-primary">
           <!-- form start -->
-          <form role="form" class="form-horizontal" action="modules/medicines/proses.php?act=insert" method="POST">
+          <form role="form" class="form-horizontal" action="modules/medicines/process.php?act=insert" method="POST">
             <div class="box-body">
               <?php  
           
@@ -38,8 +38,8 @@ if ($_GET['form']=='add') { ?>
               }
 
 
-              $buat_id   = str_pad($codigo, 6, "0", STR_PAD_LEFT);
-              $codigo = "B$buat_id";
+              $crear_id   = str_pad($codigo, 6, "0", STR_PAD_LEFT);
+              $codigo = "B$crear_id";
               ?>
 
               <div class="form-group">
@@ -144,7 +144,7 @@ elseif ($_GET['form']=='edit') {
       <div class="col-md-12">
         <div class="box box-primary">
           <!-- form start -->
-          <form role="form" class="form-horizontal" action="modules/medicines/proses.php?act=update" method="POST">
+          <form role="form" class="form-horizontal" action="modules/medicines/process.php?act=update" method="POST">
             <div class="box-body">
               
               <div class="form-group">

@@ -48,7 +48,7 @@
 
       <div class="box box-primary">
         <!-- form start -->
-        <form role="form" class="form-horizontal" method="POST" action="modules/password/proses.php">
+        <form role="form" class="form-horizontal" method="POST" action="modules/password/process.php">
           <div class="box-body">
 
             <div class="form-group">

@@ -5,9 +5,9 @@ ob_start();
 
 require_once "../../config/database.php";
 
-include "../../config/fungsi_tanggal.php";
+include "../../config/funcFechas.php";
 
-include "../../config/fungsi_rupiah.php";
+include "../../config/funcMoneda.php";
 
 $hari_ini = date("d-m-Y");
 
