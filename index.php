@@ -6,11 +6,10 @@
     <title>Login | Inventario de Medicamentos</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Aplikasi Persediaan Obat pada Apotek">
-    <meta name="author" content="Indra Styawantoro" />
+    <meta name="description" content="Solicitud de inventario de medicamentos de la farmacia La Salud">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <!--<link rel="shortcut icon" href="assets/img/favicon.png" />-->
 
     <!-- Bootstrap 3.3.2 -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
