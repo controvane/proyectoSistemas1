@@ -59,5 +59,14 @@ else {
 	elseif ($_GET['module'] == 'password') {
 		include "modules/password/view.php";
 	}
+    elseif ($_GET['module'] == 'form-supply') {
+		include "modules/supply/form.php";
+	}
+    elseif ($_GET['module'] == 'supply') {
+		include "modules/supply/view.php";
+	}
+    elseif ($_GET['module'] == 'stock') {
+		include "modules/stock/view.php";
+	}
 }
 ?>

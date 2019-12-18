@@ -30,12 +30,13 @@ session_start();
     <link href="assets/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     <link href="assets/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
-    <!-- Date Picker -->
+   <!--Date Picker -->
     <link href="assets/plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    
-
+      
+   
+      
     <script language="javascript">
       function getkey(e)
       {
@@ -86,7 +87,7 @@ session_start();
       <header class="main-header">
         <!-- Logo -->
         <a href="?module=inicioVacio" class="logo">
-          <img style="margin-top:-15px;margin-right:5px" src="assets/img/LogoFarmaciaLaSaludPequeño.jpeg" alt="Logo" width="200" height="50">
+          <img style="margin-top:-15px;margin-right:5px" src="assets/img/logo2FarmaciaLaSalud.png" alt="Logo" width="200" height="50">
           <!--<span style="font-size:20px">Farmacia "La Salud"</span>-->
         </a>
 

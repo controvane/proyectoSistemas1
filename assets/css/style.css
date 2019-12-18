@@ -1,3 +1,6 @@
+.main-header .navbar {
+    background-color: yellow;
+}
 .bg-login {
 	background-image: url("../../../images/bg-md.jpg");
 	width: 100%;

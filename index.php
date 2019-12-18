@@ -23,7 +23,7 @@
   <body class="login-page bg-login">
     <div class="login-box">
       <div style="color:#3c8dbc" class="login-logo">
-        <img style="margin-top:-12px" src="assets/img/logoFarmaciaLaSaludExtendido" alt="Logo" height="200"> <!--<b>Farmacia "La Salud"</b>-->
+        <img style="margin-top:-12px" src="assets/img/logo2FarmaciaLaSalud" alt="Logo" height="150"> <!--<b>Farmacia "La Salud"</b>-->
       </div><!-- /.login-logo -->
       <?php  
  
@@ -49,16 +49,16 @@
       ?>
 
       <div class="login-box-body">
-        <p class="login-box-msg"><i class="fa fa-user icon-title"></i> Por favor Inicie Sesión</p>
+        <p class="login-box-msg"><i class="fa fa-user icon-title"></i>Iniciar Sesión</p>
         <br/>
         <form action="login-check.php" method="POST">
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" name="username" placeholder="Username" autocomplete="off" required />
+            <input type="text" class="form-control" name="username" placeholder="Nombre de usuario" autocomplete="off" required />
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
 
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" name="password" placeholder="Password" required />
+            <input type="password" class="form-control" name="password" placeholder="Contraseña" required />
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <br/>

@@ -35,14 +35,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
   if ($_GET["module"]=="medicines_transaction" || $_GET["module"]=="form_medicines_transaction") { ?>
     <li class="active">
-      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>
+      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de movimientos demedicamentos </a>
       </li>
   <?php
   }
 
   else { ?>
     <li>
-      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>
+      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de movimientos de medicamentos </a>
       </li>
   <?php
   }
@@ -60,7 +60,7 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
     <?php
 	}
 
-	elseif ($_GET["module"]=="stock_report") { ?>
+	/*elseif ($_GET["module"]=="stock_report") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
@@ -84,7 +84,51 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		</ul>
     	</li>
     <?php
-	}
+	}*/
+    
+    /*proveedor
+    if ($_GET["module"]=="form_supply") { ?>
+        <li class="active">
+          <a href="?module=form_supply"><i class="fa fa-folder"></i> Registro de Proveedor</a>
+          </li>
+      <?php
+      }
+
+      else { ?>
+        <li>
+          <a href="?module=form_supply"><i class="fa fa-folder"></i> Registro de Proveedor</a>
+          </li>
+      <?php
+      }*/
+    
+    //Datos proveedor
+    if ($_GET["module"]=="supply") { ?>
+        <li class="active">
+          <a href="?module=supply"><i class="fa fa-clone"></i> Datos de Proveedor </a>
+          </li>
+      <?php
+      }
+
+      else { ?>
+        <li>
+          <a href="?module=supply"><i class="fa fa-clone"></i> Datos de Proveedor </a>
+          </li>
+      <?php
+      }
+    
+    if ($_GET["module"]=="stock") { ?>
+        <li class="active">
+          <a href="?module=stock"><i class="fa fa-folder"></i> Productos en Stock </a>
+          </li>
+      <?php
+      }
+
+      else { ?>
+        <li>
+          <a href="?module=stock"><i class="fa fa-folder"></i> Productos en Stock </a>
+          </li>
+      <?php
+      }
 
 
 	if ($_GET["module"]=="user" || $_GET["module"]=="form_user") { ?>

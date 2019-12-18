@@ -56,7 +56,7 @@
   background: #357ca5;
 }
 .skin-blue .main-header li.user-header {
-  background-color: #3c8dbc;
+  background-color: #1b2a49;
 }
 .skin-blue .content-header {
   background: transparent;
@@ -139,7 +139,7 @@
   border-bottom-left-radius: 0 !important;
 }
 .skin-blue.layout-top-nav .main-header > .logo {
-  background-color: #3c8dbc;
+  background-color: #1b2a49;
   color: #ffffff;
   border-bottom: 0px solid transparent;
 }

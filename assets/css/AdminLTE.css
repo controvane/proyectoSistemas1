@@ -192,6 +192,7 @@ a:focus {
   border: none;
   min-height: 50px;
   border-radius: 0;
+    background: yellow;
 }
 .layout-top-nav .main-header > .navbar {
   margin-left: 0!important;

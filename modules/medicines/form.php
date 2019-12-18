@@ -60,7 +60,7 @@ if ($_GET['form']=='add') { ?>
                 <label class="col-sm-2 control-label">Precio de Compra</label>
                 <div class="col-sm-5">
                   <div class="input-group">
-                    <span class="input-group-addon">$.</span>
+                    <span class="input-group-addon">BOB.</span>
                     <input type="text" class="form-control" id="precio_compra" name="pcompra" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" required>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ if ($_GET['form']=='add') { ?>
                 <label class="col-sm-2 control-label">Precio de Venta</label>
                 <div class="col-sm-5">
                   <div class="input-group">
-                    <span class="input-group-addon">$.</span>
+                    <span class="input-group-addon">BOB.</span>
                     <input type="text" class="form-control" id="precio_venta" name="pventa" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" required>
                   </div>
                 </div>
@@ -84,21 +84,36 @@ if ($_GET['form']=='add') { ?>
                     <option value="botellas">Botella</option>
                     <option value="cajas">Cajas</option>
                     <option value="caja">Caja</option>
-                    <option value="raya">Raya</option>
-                    <option value="tubo">Tubo</option>
+                    <option value="raya">Blister</option>
+                    <option value="tubo">Ampolla</option>
+                  </select>
+                </div>
+              </div>
+                
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Proveedor</label>
+                <div class="col-sm-5">
+                  <select class="chosen-select" name="supply" data-placeholder="-- Seleccionar --" autocomplete="off" required>
+                    <?php
+                      $query_provs = mysqli_query($mysqli, "SELECT codigo_proveedor, nombre FROM proveedor ORDER BY nombre ASC")
+                                                            or die('error '.mysqli_error($mysqli));
+                      while ($data_provs = mysqli_fetch_assoc($query_provs)) {
+                        echo"<option value=\"$data_provs[codigo_proveedor]\"> $data_provs[codigo_proveedor] | $data_provs[nombre] </option>";
+                      }
+                    ?>
                   </select>
                 </div>
               </div>
              <!--Aumentando Stock-->   
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label class="col-sm-2 control-label">Stock</label>
                 <div class="col-sm-5">
                   <div class="input-group">
-                    <!--<span class="input-group-addon"></span>-->
+                    <!--<span class="input-group-addon"></span>
                     <input type="number" class="form-control" id="stock" name="stock" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" required>
                   </div>
                 </div>
-              </div>
+              </div>-->
 
             </div><!-- /.box body -->
 

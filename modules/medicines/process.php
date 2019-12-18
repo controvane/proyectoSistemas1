@@ -19,13 +19,13 @@ else {
             $pventa = str_replace('.', '', mysqli_real_escape_string($mysqli, trim($_POST['pventa'])));
             $unidad = mysqli_real_escape_string($mysqli, trim($_POST['unidad']));
             //aumentando stock
-            $stock = mysqli_real_escape_string($mysqli, trim($_POST['stock']));
+            $proveedor = mysqli_real_escape_string($mysqli, trim($_POST['supply']));
 
             $created_user = $_SESSION['id_user'];
 
   
-            $query = mysqli_query($mysqli, "INSERT INTO medicamentos(codigo,nombre,precio_compra,precio_venta,unidad,stock,created_user,updated_user) 
-                                            VALUES('$codigo','$nombre','$pcompra','$pventa','$unidad','$stock','$created_user','$created_user')")
+            $query = mysqli_query($mysqli, "INSERT INTO medicamentos(codigo,nombre,precio_compra,precio_venta,unidad,created_user,updated_user,codigo_proveedor) 
+                                            VALUES('$codigo','$nombre','$pcompra','$pventa','$unidad','$created_user','$created_user','$proveedor')")
                                             or die('error '.mysqli_error($mysqli));    
 
         

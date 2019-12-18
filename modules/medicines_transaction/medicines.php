@@ -9,13 +9,17 @@ if(isset($_POST['dataidobat'])) {
 	$codigo = $_POST['dataidobat'];
 
  
-  $query = mysqli_query($mysqli, "SELECT codigo,nombre,unidad,stock FROM medicamentos WHERE codigo='$codigo'")
+  $query = mysqli_query($mysqli, "SELECT codigo,nombre,unidad FROM medicamentos WHERE codigo='$codigo'")
+                                  or die('error '.mysqli_error($mysqli));
+  
+  $query2 = mysqli_query($mysqli, "SELECT SUM(stock) as suma FROM unidad_medicamentos WHERE codigo_medicamento='$codigo'")
                                   or die('error '.mysqli_error($mysqli));
 
 
   $data = mysqli_fetch_assoc($query);
+  $data2 = mysqli_fetch_assoc($query2);
 
-  $stock   = $data['stock'];
+  $stock   = $data2['suma'];
   $unidad = $data['unidad'];
 
 	if($stock != '') {
